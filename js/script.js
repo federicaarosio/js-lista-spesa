@@ -3,25 +3,25 @@ const shoppingList = [
     "caramelle",
     "cioccolato",
     "focaccia",
-    "pasta"
+    "pasta",
+    "uova",
+    "latte",
+    "farina"
 ];
 
 
-let i = 0;
-
 //richiamo ul
-const wrapperElement = document.querySelector("main ul");
+const wrapperElement = document.querySelector("ul");
+
+let i = 0;
 
 while (i < shoppingList.length) {
     
-    console.log(shoppingList[i]);
-    let generatedList = shoppingList[i];
-
-    const listElement = document.createElement("li");    
+    // creo un li e lo popolo
+    const listElement = document.createElement("li");  
+    listElement.append(shoppingList[i]);
+    //lo aggiungo al parent
     wrapperElement.appendChild(listElement);
-
-    listElement.innerHTML = (generatedList);
 
     i++
 }
-
